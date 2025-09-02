@@ -15,7 +15,7 @@ const validateEmail = (email) => {
 
 //axios configuration
 const api = axios.create({
-  baseURL: "http://localhost:3000/api", // backend base URL
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000/api", // Use environment variable
   timeout: 10000, // optional: 10 seconds timeout
   headers: {
     "Content-Type": "application/json",
